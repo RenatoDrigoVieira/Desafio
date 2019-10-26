@@ -1,0 +1,146 @@
+<div class="Dados">
+  <div class="Energia">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Energia Elétrica</mat-card-title>
+      </mat-card-header>
+      <form [formGroup]="energiaForm" (ngSubmit)="cadastroEnergia()">
+        <mat-card-content>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Valor Produzido(ton)"
+              type="number"
+              formControlName="valor_produzido"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Gás Natural(GN)"
+              type="number"
+              formControlName="gas_natural"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Indice de Desempenho"
+              type="number"
+              formControlName="indice_desempenho"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Meta"
+              type="number"
+              formControlName="meta"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Δ y"
+              type="number"
+              formControlName="delta_y"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Retorno de Condensado"
+              type="number"
+              formControlName="retorno_condensado"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Temperatura da água"
+              type="number"
+              formControlName="temperatura_agua"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Consumo de água desmi"
+              type="number"
+              formControlName="consumo_agua"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Consumo especifico de água desmi"
+              type="number"
+              formControlName="consumo_especifico_agua"
+            />
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">
+            Cadastrar Dados
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+  <div class="Gas">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Gás</mat-card-title>
+      </mat-card-header>
+      <form [formGroup]="gasForm" (ngSubmit)="cadastroGas()">
+        <mat-card-content>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Tonelada prod(ton)"
+              type="number"
+              formControlName="tonelada_prod"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Energia Elétrica(kWh)"
+              type="number"
+              formControlName="energia_eletrica"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Consumo especifico(kWh)"
+              type="number"
+              formControlName="consumo_especifico"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Meta"
+              type="number"
+              formControlName="meta"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Δ y"
+              type="number"
+              formControlName="delta_y"
+            />
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">
+            Cadastrar Dados
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>

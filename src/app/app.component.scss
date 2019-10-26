@@ -1,0 +1,33 @@
+.rotas {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(230, 232, 235);
+  & :first-child {
+    margin-left: 5px;
+  }
+}
+.Dados-input {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: auto;
+  margin-right: 5px;
+  mat-form-field {
+    margin-top: 0px;
+  }
+}
+h3 {
+  margin-right: 10px;
+}
+.header {
+  width: 100%;
+}
+button {
+  height: 40px;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+h2 {
+  text-align: center;
+}

@@ -5,7 +5,7 @@ import { GoogleChartsModule } from "angular-google-charts";
 import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
-  imports: [MatToolbarModule, GoogleChartsModule, MatTableModule],
+  imports: [MatTableModule],
   declarations: [GraficoComponent],
   exports: [GraficoComponent]
 })

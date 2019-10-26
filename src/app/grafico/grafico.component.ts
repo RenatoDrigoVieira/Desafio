@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { DadosService } from "../services/dados.service";
 
 @Component({
   selector: "app-grafico",
@@ -26,7 +27,16 @@ export class GraficoComponent implements OnInit {
     { position: 10, name: "Neon", weight: 20.1797, symbol: "Ne" },
     { position: 10, name: "Neon", weight: 20.1797, symbol: "Ne" }
   ];
-  constructor() {}
+  constructor(private dadosService: DadosService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dadosService.getDados().subscribe(
+      dados => {
+        console.log(dados);
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
 }

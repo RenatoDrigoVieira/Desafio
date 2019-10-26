@@ -1,1 +1,23 @@
-<app-grafico></app-grafico>
+<mat-toolbar color="primary">
+  <div class="header">
+    <h2>Desafio de Big Data e IA</h2>
+  </div>
+</mat-toolbar>
+<div class="rotas">
+  <button mat-raised-button color="primary" (click)="navigateTo('')">
+    Grafico
+  </button>
+  <button mat-raised-button color="primary" (click)="navigateTo('cadastro')">
+    Cadastro de Dados
+  </button>
+  <div class="Dados-input" *ngIf="exibir">
+    <h3>Desempenho Desejado:</h3>
+    <mat-form-field>
+      <input matInput type="number" [(ngModel)]="desempenho" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="calcular()">
+      Calcular
+    </button>
+  </div>
+</div>
+<router-outlet></router-outlet>
