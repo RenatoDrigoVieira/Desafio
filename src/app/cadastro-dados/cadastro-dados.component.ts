@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
+import { DadosService } from "../services/dados.service";
 
 @Component({
   selector: "app-cadastro-dados",
@@ -7,7 +8,7 @@ import { FormBuilder, Validators } from "@angular/forms";
   styleUrls: ["./cadastro-dados.component.scss"]
 })
 export class CadastroDadosComponent implements OnInit {
-  energiaForm = this.formBuilder.group({
+  gasForm = this.formBuilder.group({
     valor_produzido: [0, [Validators.required]],
     gas_natural: [0, [Validators.required]],
     indice_desempenho: [0, [Validators.required]],
@@ -19,7 +20,7 @@ export class CadastroDadosComponent implements OnInit {
     consumo_especifico_agua: [0, [Validators.required]]
   });
 
-  gasForm = this.formBuilder.group({
+  energiaForm = this.formBuilder.group({
     tonelada_prod: [0, [Validators.required]],
     energia_eletrica: [0, [Validators.required]],
     consumo_especifico: [0, Validators.required],
@@ -27,14 +28,31 @@ export class CadastroDadosComponent implements OnInit {
     delta_y: [0, Validators.required]
   });
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, public dadosService: DadosService) {}
 
   ngOnInit() {}
 
-  cadastroGas() {
+  cadastroEnergia() {
+    this.dadosService.newEletrecidade(this.energiaForm.value).subscribe(
+      dados => {
+        console.log(dados);
+      },
+      err => {
+        console.log(err);
+      }
+    );
     console.log(this.gasForm.value);
   }
-  cadastroEnergia() {
-    console.log(this.energiaForm.value);
+
+  cadastroGas() {
+    this.dadosService.newGas(this.gasForm.value).subscribe(
+      dados => {
+        console.log(dados);
+      },
+      err => {
+        console.log(err);
+      }
+    );
+    console.log(this.gasForm.value);
   }
 }

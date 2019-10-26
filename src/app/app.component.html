@@ -10,14 +10,5 @@
   <button mat-raised-button color="primary" (click)="navigateTo('cadastro')">
     Cadastro de Dados
   </button>
-  <div class="Dados-input" *ngIf="exibir">
-    <h3>Desempenho Desejado:</h3>
-    <mat-form-field>
-      <input matInput type="number" [(ngModel)]="desempenho" />
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="calcular()">
-      Calcular
-    </button>
-  </div>
 </div>
 <router-outlet></router-outlet>

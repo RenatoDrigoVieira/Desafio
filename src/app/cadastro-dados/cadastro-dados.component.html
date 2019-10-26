@@ -2,9 +2,9 @@
   <div class="Energia">
     <mat-card>
       <mat-card-header>
-        <mat-card-title>Energia Elétrica</mat-card-title>
+        <mat-card-title>Gás Natural</mat-card-title>
       </mat-card-header>
-      <form [formGroup]="energiaForm" (ngSubmit)="cadastroEnergia()">
+      <form [formGroup]="gasForm" (ngSubmit)="cadastroGas()">
         <mat-card-content>
           <mat-form-field>
             <input
@@ -90,9 +90,9 @@
   <div class="Gas">
     <mat-card>
       <mat-card-header>
-        <mat-card-title>Gás</mat-card-title>
+        <mat-card-title>Energia Elétrica</mat-card-title>
       </mat-card-header>
-      <form [formGroup]="gasForm" (ngSubmit)="cadastroGas()">
+      <form [formGroup]="energiaForm" (ngSubmit)="cadastroEnergia()">
         <mat-card-content>
           <mat-form-field>
             <input
